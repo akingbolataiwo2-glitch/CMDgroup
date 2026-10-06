@@ -1,0 +1,15 @@
+/* Mobile fixes: stack multi-column inline grids and keep content inside the viewport. */
+html,body{max-width:100%}
+body{overflow-x:clip}
+img,video,svg{max-width:100%}
+@media (max-width:820px){
+  [style*="grid-template-columns"]{grid-template-columns:1fr!important}
+  footer [style*="grid-template-columns"]{grid-template-columns:1fr 1fr!important;gap:28px!important}
+  #founder-visual{height:auto!important;min-height:360px;max-width:100%}
+}
+@media (max-width:520px){
+  footer [style*="grid-template-columns"]{grid-template-columns:1fr!important}
+}
+@media (max-width:520px){
+  [style*="white-space: nowrap"],[style*="white-space:nowrap"]{white-space:normal!important}
+}
