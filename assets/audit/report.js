@@ -47,7 +47,7 @@
     root.innerHTML = '';
     var date = new Date(R.auditedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
     root.appendChild(h('div', { class: 'rep-head' }, [h('span', { class: 'kicker', text: 'Shopify store audit report' }), h('h1', { text: R.store.name || R.store.domain }),
-      h('div', { class: 'meta' }, [h('span', { text: R.store.domain }), h('span', { text: 'Audited ' + date }), R.store.niche ? h('span', { text: 'Category: ' + R.store.niche }) : null]),
+      h('div', { class: 'meta' }, [h('span', { text: R.store.domain }), h('span', { text: 'Audited ' + date })]),
       h('div', { class: 'no-print', style: 'margin-top:16px;display:flex;gap:10px;flex-wrap:wrap' }, [h('button', { class: 'btn btn-outline', type: 'button', text: 'Save as PDF', onclick: function () { window.print(); } }), h('a', { class: 'btn btn-outline', href: 'shopify-store-audit.html', text: 'Audit another store' })])]));
 
     // Executive summary + dashboard
