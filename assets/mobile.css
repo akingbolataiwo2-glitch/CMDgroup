@@ -13,3 +13,20 @@ img,video,svg{max-width:100%}
 @media (max-width:520px){
   [style*="white-space: nowrap"],[style*="white-space:nowrap"]{white-space:normal!important}
 }
+
+/* Mobile header: logo + CTA + menu button, links in a tidy dropdown. */
+.cm-burger{display:none}
+@media (max-width:900px){
+  .nav{padding:10px 16px!important;gap:10px!important;flex-wrap:wrap!important;align-items:center!important}
+  .nav .cm-logo{order:1;margin-right:auto!important}
+  .nav .cm-logo-mark{height:30px!important}
+  .nav>a.btn{order:2;margin-left:0!important;padding:9px 14px!important;font-size:13px!important;white-space:nowrap}
+  .cm-burger{order:3;display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:42px;height:40px;padding:0 11px;box-sizing:border-box;background:transparent;border:1px solid var(--color-divider);border-radius:10px;cursor:pointer}
+  .cm-burger span{display:block;height:2px;background:var(--color-text);border-radius:2px;transition:transform .2s ease,opacity .2s ease}
+  .nav.cm-open .cm-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav.cm-open .cm-burger span:nth-child(2){opacity:0}
+  .nav.cm-open .cm-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .nav>a:not(.cm-logo):not(.btn){display:none!important;order:4;width:100%;box-sizing:border-box;padding:14px 4px!important;font-size:16px!important;border-top:1px solid var(--color-divider)}
+  .nav.cm-open>a:not(.cm-logo):not(.btn){display:block!important}
+  .nav.cm-open{max-height:100vh;overflow-y:auto}
+}
